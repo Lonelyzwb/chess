@@ -44,6 +44,13 @@
       background-color: #82d4ee;
     }
 
+    .start {
+      min-width: 100vw;
+      min-height: 100vh;
+
+      background-color: #82d4ee;
+    }
+
     .control {
       flex: 1;
       border: 3px solid #82d4ee;
@@ -185,6 +192,14 @@
       const chess = document.querySelector(".chess");
       const creates = document.querySelectorAll("button");
       const text = document.querySelector("input");
+
+      chess.addEventListener("touchstart", function () {
+        chess.classList.add("start");
+      });
+
+      chess.addEventListener("touchend", function () {
+        chess.classList.remove("start");
+      });
 
       let temp = 0;
 
